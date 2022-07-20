@@ -1,4 +1,4 @@
-name: Create Comment
+name: Issue Help wanted
 
 on:
   issues:
@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.label.name == 'help wanted'
     steps:
-      - name: Create comment
+      - name: Add comment
         uses: actions-cool/issues-helper@v3
         with:
           actions: 'create-comment'
