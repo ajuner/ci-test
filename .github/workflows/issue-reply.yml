@@ -15,5 +15,5 @@ jobs:
           actions: 'create-comment'
           issue-number: ${{ github.event.issue.number }}
           body: |
-            Hello @${{ github.event.issue.user.login }}. Please provide a [reproduction](https://sfc.vuejs.org/) or a minimal GitHub repository. Make sure to choose the correct version.
+            Hello @${{ github.event.issue.user.login }}. Please provide a [minimal reproduction](https://stackoverflow.com/help/minimal-reproducible-example) using a GitHub repository or [Playground](https://sfc.vuejs.org/). Issues marked with `need more info` will be closed if they have no activity within 1 days.
             
