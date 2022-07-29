@@ -1,0 +1,19 @@
+name: Issue Reply
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  issue-reply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: need more info
+        if: github.event.label.name == 'need more info'
+        uses: actions-cool/issues-helper@v3
+        with:
+          actions: 'create-comment'
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Hello @${{ github.event.issue.user.login }}. Please provide a [reproduction](https://sfc.vuejs.org/) or a minimal GitHub repository. Make sure to choose the correct version.
+            
